@@ -1,6 +1,12 @@
 AWS.Net - Simple library for AWS services. i.e. S3, SQS & SES
 ==============================================================
 
+**Nuget Install**
+
+```javascript
+**Install-Package AWS.Net**
+```
+
 SQS - Simple Queue Service 
 --------------------------
 
