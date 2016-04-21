@@ -51,7 +51,7 @@ public class HelloEmail : EmailMessage
     }
 ```
 
-> Example email HTML template 
+> Example HTML email template 
 
 ```html
 <html>
@@ -76,4 +76,31 @@ var service = new SesService(new S3Service(new AwsCredentials
 });
 
 service.Send(new HelloEmail());
+```
+
+S3 - Simple Storage Service
+---------------------------
+
+Upload to S3
+
+```javascript
+var service = new S3Service(new AwsCredentials
+{
+  //S3 Service Region
+  RegionEndpoint = RegionEndpoint.USEast1
+}, "bucketname");
+
+service.Upload("myfile.jpg", stream, S3CannedACL.PublicRead);
+```
+
+Upload from S3
+
+```javascript
+var service = new S3Service(new AwsCredentials
+{
+  //S3 Service Region
+  RegionEndpoint = RegionEndpoint.USEast1
+}, "bucketname");
+
+var content = service.Download("myfile.jpg");
 ```
