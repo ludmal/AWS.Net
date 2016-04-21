@@ -27,3 +27,23 @@ service.QueueUrl = ConfigurationManager.AppSettings["EmailQueue"];
 
 var items = service.Process();
 ```
+
+SES - Simple Email Services
+---------------------------
+
+Create your own email message using **EmailMessage** class
+```javascript
+public class HelloEmail : EmailMessage
+    {
+        public HelloEmail()
+        {
+            Subject = "Hello world";
+            //Email template file Url in the S3 bucket
+            TemplateFileName = "emails/test.html";
+            From = "hello@ludmal.com";
+            To = "ludmal@gmail.com";
+            //Field values to replace in the template
+            AddFields("NAME", "ludmal");
+        }
+    }
+```
