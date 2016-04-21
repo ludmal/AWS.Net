@@ -20,9 +20,11 @@ Receiving **T object list** from Queue
 ```javascript
 var service = new SqsService<EmailMessage>(new AwsCredentials
 {
+ //SQS Service Region
  RegionEndpoint = RegionEndpoint.USWest2
 });
 
+//SQS Queue Url
 service.QueueUrl = ConfigurationManager.AppSettings["EmailQueue"];
 
 var items = service.Process();
@@ -65,9 +67,11 @@ Send email using **SesService** class
 ```javascript
 var service = new SesService(new S3Service(new AwsCredentials
 {
+  //SES Service Region
   RegionEndpoint = RegionEndpoint.USEast1
 }, "bucketname"), new AwsCredentials
 {
+  //S3 Service Region
   RegionEndpoint = RegionEndpoint.USWest2
 });
 
