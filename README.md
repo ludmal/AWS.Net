@@ -30,6 +30,7 @@ var items = service.Process();
 
 SES - Simple Email Services
 ---------------------------
+> SES uses S3 bucket to store email templates
 
 Create your own email message using **EmailMessage** class
 ```javascript
