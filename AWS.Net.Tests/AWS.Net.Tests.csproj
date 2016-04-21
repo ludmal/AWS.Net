@@ -35,6 +35,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AWS.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWS.Net.1.0.0.0\lib\net45\AWS.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="AWSSDK.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
       <HintPath>..\packages\AWSSDK.Core.3.1.5.3\lib\net45\AWSSDK.Core.dll</HintPath>
       <Private>True</Private>
@@ -49,6 +53,10 @@
     </Reference>
     <Reference Include="AWSSDK.SQS, Version=3.1.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
       <HintPath>..\packages\AWSSDK.SQS.3.1.0.6\lib\net45\AWSSDK.SQS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -69,12 +77,6 @@
   <ItemGroup>
     <Compile Include="QueueTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AWS.Net\AWS.Net.csproj">
-      <Project>{3dffdb47-ba1d-4f7f-a2aa-da1d1fe0b3b9}</Project>
-      <Name>AWS.Net</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

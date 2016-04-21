@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("s3aws")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Simple library for AWS Services. i.e S3, SES & SQS")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("s3aws")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyProduct("AWS.Net")]
+[assembly: AssemblyCopyright("Copyright Infonex ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
