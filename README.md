@@ -60,3 +60,16 @@ public class HelloEmail : EmailMessage
   </body>
 <html>
 ```
+
+Send email using **SesService** class
+```javascript
+var service = new SesService(new S3Service(new AwsCredentials
+{
+  RegionEndpoint = RegionEndpoint.USEast1
+}, "bucketname"), new AwsCredentials
+{
+  RegionEndpoint = RegionEndpoint.USWest2
+});
+
+service.Send(new HelloEmail());
+```
