@@ -93,7 +93,7 @@ var service = new S3Service(new AwsCredentials
 service.Upload("myfile.jpg", stream, S3CannedACL.PublicRead);
 ```
 
-Upload from S3
+Download from S3
 
 ```javascript
 var service = new S3Service(new AwsCredentials
@@ -103,4 +103,16 @@ var service = new S3Service(new AwsCredentials
 }, "bucketname");
 
 var content = service.Download("myfile.jpg");
+```
+
+Aws credentials
+--------------------
+
+> AwsCredential class get the **AWSAccessKey** and **AWSSecretKey** from the config file. You can even pass these values in the constructor
+
+```html
+<appSettings>
+    <add key="AWSAccessKey" value="" />
+    <add key="AWSSecretKey" value="" />
+</appSettings>
 ```
