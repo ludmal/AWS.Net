@@ -8,6 +8,18 @@ namespace AWS.Net
         private string _key;
         private string _secret;
 
+        public AwsCredentials(string key, string secret, RegionEndpoint regionEndpoint)
+        {
+            this._key = key;
+            this._secret = secret;
+            this.RegionEndpoint = regionEndpoint;
+        }
+
+        public AwsCredentials()
+        {
+            
+        }
+
         public string Key
         {
             get

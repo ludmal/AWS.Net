@@ -1,6 +1,6 @@
 namespace AWS.Net
 {
-    public class EmailMessage
+    public class EmailMessage : IMailMessage
     {
         public string To { get; set; }
         public string From { get; set; }

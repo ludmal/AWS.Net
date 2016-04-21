@@ -1,3 +1,4 @@
+using System;
 using System.Configuration;
 using System.IO;
 using System.Linq;
@@ -7,7 +8,7 @@ using Amazon.SimpleEmail.Model;
 
 namespace AWS.Net
 {
-    public class SesService
+    public class SesService : IMailService
     {
         private readonly AwsCredentials _credentials;
         private readonly S3Service _s3Service;
@@ -18,7 +19,7 @@ namespace AWS.Net
             _credentials = credentials;
         }
 
-        public void Send(EmailMessage message)
+        public void Send(IMailMessage message)
         {
             var body = string.Empty;
 
@@ -59,7 +60,7 @@ namespace AWS.Net
 
             if (sendResult.HttpStatusCode != HttpStatusCode.OK)
             {
-                //Error
+                throw new Exception(string.Format("Unable to send the email. {0}", sendResult.ResponseMetadata.Metadata));
             }
         }
     }
