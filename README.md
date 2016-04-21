@@ -48,3 +48,15 @@ public class HelloEmail : EmailMessage
         }
     }
 ```
+
+> Example email HTML template 
+
+```html
+<html>
+  <body>
+    <div>
+      Hello [NAME]
+    </div>
+  </body>
+<html>
+```
